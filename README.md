@@ -1,6 +1,57 @@
-# Getting Started with Create React App
+This is a note-taking web app that allows user to create, delete and store notes on the browser.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo Link
+
+Hosted on Firebase: (https://sampleproject-42ae9.web.app)
+
+### Features
+
+- [x] The user should be able to create a new note.
+- [x] The user should be able to edit and delete a note.
+- [x] The user should be able to navigate through multiple notes.
+- [x] Search function to find notes.
+- [x] Create notes in different categories.
+- [ ] Move notes trough categories.
+- [x] Markdown editor.
+- [x] Using localStorage to store notes.
+
+### File Structure
+
+The structure is such that files which are rendered on the same screens, they are in the same folder.
+The assets folder is under the src folder but outside the components folder.
+
+```
+|   |   ├── components
+|   |   |   ├── sidebar
+|   |   |   |   ├── folder.js
+|   |   |   |   ├── note.js
+|   |   |   |   ├── searchbar.js
+|   |   |   |   ├── sidebar-header.js
+|   |   |   |   ├── sidebar.js
+|   |   |   ├── main.js
+|   |   ├── assets
+|   |   |   ├── add-document.png
+|   |   |   ├── add-folder.png
+|   |   |   ├── doc.png
+|   |   |   ├── folder.png
+|   |   ├── App.js
+|   |   ├── App.css
+
+```
+
+### Architecture and Package Usage
+
+- The page is built as reusable component-based architecture.
+- For styling, I have used mostly plain CSS and `react-boostrap` ext package for some components
+- For searching notes, I have used an external package, `react-bootstrap-typahead` (ericgio.github.io/react-bootstrap-typeahead/). I have used the `Typeahead` component, whereby I give the search query and it filters the list of notes based on the query. This component also allows the user to provide the properties to filter on, which for now I have added the note's `title` and `body` but more can be added.
+- For markdown editor, I have used another external package, `react-markdown` (remarkjs.github.io/react-markdown/). This package supports markdown syntax and then show the notes as markdown.
+- Lastly, I have used `react-uuid` package to help generate random unique identifer where required
+
+### Hosting
+
+I have built and deployed it on Firebase Hosting. Demo link: (https://sampleproject-42ae9.web.app)
+
+Below are the built in steps to run and build the app as provided by the create-react-app cli
 
 ## Available Scripts
 
@@ -16,6 +67,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
+(Apologies for not having any tests, I couldn't figure out how to write Jest for React since I didn't use any ext backend)
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
@@ -28,43 +80,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
