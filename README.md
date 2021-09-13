@@ -51,6 +51,10 @@ The assets folder is under the src folder but outside the components folder.
 
 I have built and deployed it on Firebase Hosting. Demo link: (https://sampleproject-42ae9.web.app)
 
+### Limitations
+
+- When adding the category to notes, the total number of notes under that catergory is incorrect. This limitation was introduced when trying to navigate and assign a category to notes.
+
 Below are the built in steps to run and build the app as provided by the create-react-app cli
 
 ## Available Scripts
